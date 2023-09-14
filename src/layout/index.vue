@@ -19,6 +19,7 @@
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import AppMain from './components/AppMain'
+import variables from '@/styles/variables.scss'
 </script>
 
 <style lang='scss' scoped>
