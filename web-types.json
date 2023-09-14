@@ -1,0 +1,39 @@
+{
+  "framework": "vue",
+  "name": "demo_vue3",
+  "version": "0.1.0",
+  "contributions": {
+    "html": {
+      "description-markup": "markdown",
+      "types-syntax": "typescript",
+      "tags": [
+        {
+          "name": "SvgIcon",
+          "description": "",
+          "attributes": [
+            {
+              "name": "icon",
+              "required": true,
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "className",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"\""
+            }
+          ],
+          "source": {
+            "module": "./src/components/SvgIcon/index.vue",
+            "symbol": "default"
+          }
+        }
+      ]
+    }
+  }
+}
