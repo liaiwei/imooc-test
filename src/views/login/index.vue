@@ -93,7 +93,6 @@ const loginFormRef = ref(null)
 const store = useStore()
 
 const handlerLogin = () => {
-  console.log(loginFormRef.value)
   loginFormRef.value.validate((valid) => {
     // 1.进项表单校验
     if (!valid) return
@@ -146,14 +145,14 @@ $cursor: #fff;
       width: 85%;
 
       input {
-        background: transparent;
+        //background: $bg;
         border: 0px;
         -webkit-appearance: none;
         border-radius: 0px;
         padding: 12px 5px 12px 15px;
-        color: $light_gray;
+        //color: $light_gray;
         height: 47px;
-        caret-color: $cursor;
+        //caret-color: $cursor;
       }
     }
   }

@@ -5,6 +5,7 @@ function resolve(dir) {
 }
 
 module.exports = {
+  lintOnSave: false,
   devServer:{
     proxy:{
       '/api':{
