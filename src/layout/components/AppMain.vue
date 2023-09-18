@@ -1,12 +1,14 @@
 <template>
-  <div class='app-main'>AppMain</div>
+  <div class="app-main">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script setup>
 import {} from 'vue'
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .app-main {
   min-height: calc(100vh - 50px);
   width: 100%;
