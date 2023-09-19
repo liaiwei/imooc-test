@@ -52,7 +52,7 @@ export const generateMenus = (routes, basePath = '') => {
       return
     }
     //不存在children,存在meta || 存在children && 存在meta
-    //因为最终的menu需要进行跳转，此时我们需要合并path
+    //因为最menu需要进行跳转终的，此时我们需要合并path
     const routePath = path.resolve(basePath, item.path)
     //路由分离之后，可能存在同名路由的情况
     let route = result.find((item) => item.path === routePath)

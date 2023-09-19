@@ -1,25 +1,26 @@
 <template>
-  <div class='navbar'>
-    <div class='right-menu'>
+  <div class="navbar">
+    <Hamburger class="hamburger-container"></Hamburger>
+    <div class="right-menu">
       <!-- 头像 -->
-      <el-dropdown class='avatar-container' trigger='click'>
-        <div class='avatar-wrapper'>
+      <el-dropdown class="avatar-container" trigger="click">
+        <div class="avatar-wrapper">
           <el-avatar
-            shape='square'
-            :size='40'
-            :src='$store.getters.userInfo.avatar'
+            shape="square"
+            :size="40"
+            :src="$store.getters.userInfo.avatar"
           ></el-avatar>
-          <i class='el-icon-s-tools'></i>
+          <i class="el-icon-s-tools"></i>
         </div>
         <template #dropdown>
-          <el-dropdown-menu class='user-dropdown'>
-            <router-link to='/'>
+          <el-dropdown-menu class="user-dropdown">
+            <router-link to="/">
               <el-dropdown-item> 首页</el-dropdown-item>
             </router-link>
-            <a target='_blank' href=''>
+            <a target="_blank" href="">
               <el-dropdown-item>课程主页</el-dropdown-item>
             </a>
-            <el-dropdown-item divided @click='logout'>
+            <el-dropdown-item divided @click="logout">
               退出登录
             </el-dropdown-item>
           </el-dropdown-menu>
@@ -32,15 +33,15 @@
 <script setup>
 import {} from 'vue'
 import { useStore } from 'vuex'
+import Hamburger from '@/layout/components/hamburger'
 
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
 }
-
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .navbar {
   height: 50px;
   overflow: hidden;
@@ -66,6 +67,19 @@ const logout = () => {
           margin-right: 12px;
         }
       }
+    }
+  }
+
+  .hamburger-container {
+    line-height: 46px;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+    // hover 动画
+    transition: background 0.5s;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
     }
   }
 }
