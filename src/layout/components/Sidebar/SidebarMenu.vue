@@ -6,6 +6,7 @@
     :background-color="$store.getters.cssVar.menuBg"
     :text-color="$store.getters.cssVar.menuText"
     :active-text-color="$store.getters.cssVar.menuActiveText"
+    router
   >
     <SidebarItem
       v-for="item in routes"
