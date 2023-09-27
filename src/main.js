@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import installElementPlus from './plugins/element'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
 //初始化样式表
 import '@/styles/index.scss'
 //导入svgIcon
