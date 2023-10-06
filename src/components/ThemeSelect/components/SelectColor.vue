@@ -18,6 +18,7 @@
 <script setup>
 import { defineProps, defineEmits, ref } from 'vue'
 import { useStore } from 'vuex'
+import { generateNewStyle, writeNewStyle } from '@/utils/theme'
 
 defineProps({
   modelValue: {
@@ -54,6 +55,9 @@ const closed = () => {
 }
 
 const confirm = async () => {
+  console.log('mColor.value==',mColor.value)
+ const newStyle = await generateNewStyle(mColor.value )
+ writeNewStyle(newStyle)
   //保存最新的主题颜色
   store.commit('theme/setMainColor', mColor.value)
   closed()
