@@ -3,6 +3,8 @@
     <Hamburger class="hamburger-container"></Hamburger>
     <Breadcrumb class="breadcrumb-container"></Breadcrumb>
     <div class="right-menu">
+      <HeaderSearch class="right-menu-item hover-effect"/>
+      <Screenfull class="right-menu-item hover-effect"/>
       <theme-picker class="right-menu-item hover-effect"></theme-picker>
       <!-- 头像 -->
       <el-dropdown class="avatar-container" trigger="click">
@@ -38,7 +40,8 @@ import { useStore } from 'vuex'
 import Hamburger from '@/layout/components/hamburger'
 import Breadcrumb from '@/components/Breadcrumb'
 import ThemePicker from '@/components/ThemeSelect/index'
-
+import Screenfull from '@/components/Screenfull/index'
+import HeaderSearch from '@/components/headerSearch/index'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')
